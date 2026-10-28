@@ -198,7 +198,6 @@ export default function Home() {
                   : "Dog picture unavailable."}
               </div>
             )}
-            <span className="photo-badge">MYSTERY PUP</span>
           </div>
 
           <div className="quiz-content">
@@ -355,6 +354,11 @@ export default function Home() {
           </div>
         </section>
       </main>
+
+      <footer className="site-footer">
+        <span>Made by Jon</span>
+        <span>Photos and breeds from Dog API</span>
+      </footer>
     </div>
   );
 }
