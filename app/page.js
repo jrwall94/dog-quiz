@@ -29,6 +29,7 @@ export default function Home() {
   const [isLoadingBreeds, setIsLoadingBreeds] = useState(true);
   const [isLoadingImage, setIsLoadingImage] = useState(true);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [score, setScore] = useState({ correct: 0, total: 0 });
   const [imageError, setImageError] = useState(false);
   const [error, setError] = useState("");
   const dropdownRef = useRef(null);
@@ -126,6 +127,10 @@ export default function Home() {
     if (!selectedBreed || !currentDog || isSubmitted) {
       return;
     }
+    setScore((currentScore) => ({
+      correct: currentScore.correct + (isCorrect ? 1 : 0),
+      total: currentScore.total + 1,
+    }));
     setIsSubmitted(true);
     setIsOpen(false);
     setSearchTerm("");
@@ -163,6 +168,12 @@ export default function Home() {
           <p className="intro-copy">
             Take a look at your mystery pup, pick a breed, and see if you got it
             right.
+          </p>
+          <p className="score-display" aria-live="polite">
+            <span className="score-value">
+              {score.correct} / {score.total}
+            </span>{" "}
+            correct guesses
           </p>
         </div>
 

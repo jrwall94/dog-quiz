@@ -118,6 +118,25 @@ a:focus-visible {
   line-height: 1.65;
 }
 
+.score-display {
+  display: inline-flex;
+  min-height: 34px;
+  align-items: center;
+  gap: 5px;
+  margin: 18px 0 0;
+  padding: 0 13px;
+  border: 1px solid #e2e8de;
+  border-radius: 999px;
+  background: #fff;
+  color: #657365;
+  font-size: 12px;
+}
+
+.score-value {
+  color: #36563d;
+  font-weight: 800;
+}
+
 .quiz-card {
   display: grid;
   overflow: visible;
