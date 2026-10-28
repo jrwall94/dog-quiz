@@ -35,7 +35,11 @@ a:focus-visible {
   min-height: 100vh;
   flex-direction: column;
   background:
-    radial-gradient(ellipse at 50% 30%, rgb(255 255 255 / 75%), transparent 58%),
+    radial-gradient(
+      ellipse at 50% 30%,
+      rgb(255 255 255 / 75%),
+      transparent 58%
+    ),
     #f7f6f1;
 }
 
@@ -250,7 +254,9 @@ a:focus-visible {
   cursor: pointer;
   font-size: 14px;
   text-align: left;
-  transition: border-color 150ms ease, box-shadow 150ms ease;
+  transition:
+    border-color 150ms ease,
+    box-shadow 150ms ease;
 }
 
 .breed-trigger:hover:not(:disabled),
@@ -343,7 +349,10 @@ a:focus-visible {
   cursor: pointer;
   font-size: 13px;
   font-weight: 700;
-  transition: background 150ms ease, transform 150ms ease, opacity 150ms ease;
+  transition:
+    background 150ms ease,
+    transform 150ms ease,
+    opacity 150ms ease;
 }
 
 .submit-button {
@@ -538,9 +547,9 @@ a:focus-visible {
 }
 
 @media (max-width: 420px) {
-  .header-note {
+  /* .header-note {
     display: none;
-  }
+  } */
 
   .new-dog-row {
     flex-direction: column;
